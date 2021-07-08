@@ -27,21 +27,6 @@ const main = document.querySelector("main");
 const circle = document.querySelector(".toggle-circle");
 const sun = document.querySelector(".toggle-sun");
 
-window.onload = () => {
-  setTimeout(() => {
-    themetoggle.classList.add("appear");
-  }, 1000);
-};
-
-themetoggle.addEventListener("click", () => {
-  circle.classList.toggle("change");
-  sun.classList.toggle("change");
-  if (document.body.classList.contains("dark-theme")) {
-    LightMode();
-  } else {
-    DarkMode();
-  }
-});
 
 LightMode = () => {
   localStorage.setItem("darkoption", null);
@@ -56,10 +41,25 @@ DarkMode = () => {
   themetoggle.ariaLabel = "Switch to light theme";
 };
 
-// LocalStorage
-
 if (maindark != "enabled") {
   LightMode();
 } else {
   DarkMode();
 }
+
+window.onload = () => {
+  setTimeout(() => {
+    themetoggle.classList.add("appear");
+  }, 1000);
+};
+
+
+themetoggle.addEventListener("click", () => {
+  circle.classList.toggle("change");
+  sun.classList.toggle("change");
+  if (document.body.classList.contains("dark-theme")) {
+    LightMode();
+  } else {
+    DarkMode();
+  }
+});
