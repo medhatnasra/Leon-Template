@@ -606,16 +606,16 @@ body {
 }
 
 .about .image {
-  -webkit-clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
-          clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
-  -webkit-transition: 1.25s -webkit-clip-path ease-in-out;
-  transition: 1.25s -webkit-clip-path ease-in-out;
-  transition: 1.25s clip-path ease-in-out;
-  transition: 1.25s clip-path ease-in-out, 1.25s -webkit-clip-path ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 1s -webkit-transform cubic-bezier(0.32, -0.25, 0.64, 1.43);
+  transition: 1s -webkit-transform cubic-bezier(0.32, -0.25, 0.64, 1.43);
+  transition: 1s transform cubic-bezier(0.32, -0.25, 0.64, 1.43);
+  transition: 1s transform cubic-bezier(0.32, -0.25, 0.64, 1.43), 1s -webkit-transform cubic-bezier(0.32, -0.25, 0.64, 1.43);
 }
 
 .about .image.popp {
-  -webkit-clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
-          clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */

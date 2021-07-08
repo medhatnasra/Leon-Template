@@ -67,7 +67,7 @@ themetoggle.addEventListener("click", () => {
 const AboutSection = document.querySelector(".about .image");
 
 window.onscroll = () => {
-  if (AboutSection.getBoundingClientRect().top < window.innerHeight / 1.5) {
+  if (AboutSection.getBoundingClientRect().top < window.innerHeight / 1) {
     AboutSection.classList.add("popp");
   }
 };

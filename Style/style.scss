@@ -461,12 +461,10 @@ body {
 }
 
 .about .image {
-  clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
-  transition: 1.25s clip-path ease-in-out;
-
+  transform: scale(0);
+  transition: 1s transform cubic-bezier(0.32,-0.25, 0.64, 1.43);
 
   &.popp {
-    clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
-
+    transform: scale(1);
   }
 }
