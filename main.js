@@ -17,3 +17,37 @@ window.addEventListener("scroll", () => {
     window.scrollTo(0, 0);
   });
 });
+
+// Dark Toggle
+
+const themetoggle = document.querySelector(".toggle-menu");
+const main = document.querySelector("main");
+const circle = document.querySelector(".toggle-circle");
+const sun = document.querySelector(".toggle-sun");
+
+window.onload = () => {
+  setTimeout(() => {
+    themetoggle.classList.add("appear");
+  }, 1000);
+};
+
+themetoggle.addEventListener("click", () => {
+  circle.classList.toggle("change");
+  sun.classList.toggle("change");
+  if (document.body.classList.contains("dark-theme")) {
+    LightMode();
+  } else {
+    DarkMode();
+  }
+});
+
+LightMode = () => {
+  document.body.classList.remove("dark-theme");
+  main.style.backgroundImage = "url(../images/triangles-3320452.png)";
+  themetoggle.ariaLabel = "Switch to dark theme";
+};
+DarkMode = () => {
+  document.body.classList.add("dark-theme");
+  main.style.backgroundImage = "none";
+  themetoggle.ariaLabel = "Switch to light theme";
+};
