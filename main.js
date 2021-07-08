@@ -43,7 +43,7 @@ themetoggle.addEventListener("click", () => {
 
 LightMode = () => {
   document.body.classList.remove("dark-theme");
-  main.style.backgroundImage = "url(../images/triangles-3320452.png)";
+  main.style.backgroundImage = 'url(../images/triangles-3320452.png)';
   themetoggle.ariaLabel = "Switch to dark theme";
 };
 DarkMode = () => {
