@@ -1,3 +1,5 @@
+let maindark = localStorage.getItem("darkoption");
+
 const burger = document.querySelector(".bars");
 const links = document.querySelector(".links");
 const scrollpop = document.querySelector(".scrollpop");
@@ -42,12 +44,22 @@ themetoggle.addEventListener("click", () => {
 });
 
 LightMode = () => {
+  localStorage.setItem("darkoption", null);
   document.body.classList.remove("dark-theme");
-  main.style.backgroundImage = 'url(../images/triangles-3320452.png)';
+  main.style.backgroundImage = "url(../images/triangles-3320452.png)";
   themetoggle.ariaLabel = "Switch to dark theme";
 };
 DarkMode = () => {
+  localStorage.setItem("darkoption", "enabled");
   document.body.classList.add("dark-theme");
   main.style.backgroundImage = "none";
   themetoggle.ariaLabel = "Switch to light theme";
 };
+
+// LocalStorage
+
+if (maindark != "enabled") {
+  LightMode();
+} else {
+  DarkMode();
+}
