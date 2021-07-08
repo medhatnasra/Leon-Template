@@ -27,7 +27,6 @@ const main = document.querySelector("main");
 const circle = document.querySelector(".toggle-circle");
 const sun = document.querySelector(".toggle-sun");
 
-
 LightMode = () => {
   localStorage.setItem("darkoption", null);
   document.body.classList.remove("dark-theme");
@@ -53,7 +52,6 @@ window.onload = () => {
   }, 1000);
 };
 
-
 themetoggle.addEventListener("click", () => {
   circle.classList.toggle("change");
   sun.classList.toggle("change");
@@ -63,3 +61,13 @@ themetoggle.addEventListener("click", () => {
     DarkMode();
   }
 });
+
+// About Section 
+
+const AboutSection = document.querySelector(".about .image");
+
+window.onscroll = () => {
+  if (AboutSection.getBoundingClientRect().top < window.innerHeight / 1.5) {
+    AboutSection.classList.add("popp");
+  }
+};

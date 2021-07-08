@@ -35,6 +35,7 @@ body {
   overflow: hidden;
   .toggle-menu {
     position: fixed;
+    z-index: 999;
     left: -50px;
     top: 20%;
     transition: 0.25s all ease-out;
@@ -456,5 +457,16 @@ body {
   transition: 0.5s all ease-out;
   &.change {
     right: 1%;
+  }
+}
+
+.about .image {
+  clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
+  transition: 1.25s clip-path ease-in-out;
+
+
+  &.popp {
+    clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
+
   }
 }

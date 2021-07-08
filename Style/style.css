@@ -25,6 +25,7 @@ body {
 
 .papa-container .toggle-menu {
   position: fixed;
+  z-index: 999;
   left: -50px;
   top: 20%;
   -webkit-transition: 0.25s all ease-out;
@@ -602,5 +603,19 @@ body {
 
 .scrollpop.change {
   right: 1%;
+}
+
+.about .image {
+  -webkit-clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
+          clip-path: polygon(63% 39%, 70% 44%, 70% 45%, 70% 44%);
+  -webkit-transition: 1.25s -webkit-clip-path ease-in-out;
+  transition: 1.25s -webkit-clip-path ease-in-out;
+  transition: 1.25s clip-path ease-in-out;
+  transition: 1.25s clip-path ease-in-out, 1.25s -webkit-clip-path ease-in-out;
+}
+
+.about .image.popp {
+  -webkit-clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
+          clip-path: polygon(-20% -20%, 200% -20%, 200% 200%, -20% 200%);
 }
 /*# sourceMappingURL=style.css.map */
